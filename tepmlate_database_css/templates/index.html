@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,16 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href="{% static 'style.css' %}"
 </head>
 
 <body>
     <h1>Hi, Web master ,How are yoy</h1>
-    <a href="{% url 'index' %}"> Home</a>
-    <a href="{% url 'about' %}">About</a>
+    <div class="menu">
+        <a href="{% url 'index' %}"> Home</a>
+        <a href="{% url 'about' %}">About</a>
      <a href="{% url 'contact' %}">Contact</a>
      <a href="{% url 'view' %}">View</a>
      <a href="{% url 'more' %}">More</a>
      <a href="{% url 'post' %}">Post</a>
+    </div>
     <h3>i am index page</h3>
     {% block content %}
     {% endblock content %}
