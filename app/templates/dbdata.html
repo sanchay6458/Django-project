@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+{% for name in frts %}
+<h4>{{ name.particular }}</h4>
+<h4>{{ name.quantity }}</h4>
+{% endfor %}
+
+{% for describe in frts %}
+<h6>{{ describe.description }}</h6>
+{% endfor %}
+
+{% endblock content %}
